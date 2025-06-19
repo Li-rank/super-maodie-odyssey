@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Super 耄耋 Odyssey</title>
+  <link rel="stylesheet" href="style.css" />
+  <!--创造性：实现了滚动背景图与镜头跟随，使游戏画面更具既视感；
+  障碍物图片添加了碰撞盒体积，降低了图片边缘部分对碰撞判定的影响，增加了游戏的真实感；
+  角色添加了二段跳与无敌帧，设计了金币收集与生命系统，增加了游戏的可玩性；
+  数值经过多轮调整，确保易于上手同时具备挑战性；
+  结合流行元素，吸引玩家兴趣-->
+</head>
+
+<body>
+  <div id="introPanel">
+    <h1 id="gameTitle">🌟 Super 耄耋 Odyssey 🌟</h1>
+    <p id="gameInstructions"> A/D 控制左右移动，W 键控制跳跃（双击触发二段跳）。躲避脚踏车耄耋同时收集金币（金色圆圈）。每收集3金币奖励1条额外生命（触碰脚踏车耄耋时向上弹起触发无敌帧）。挑战谁能坚持最久吧！</p>
+    <p id="credits">🎮 作者：2410李俊贤</p>
+    <button id="startButton">开始游戏</button>
+  </div>
+  <audio id="bgMusic" src="music.flac" loop></audio>
+  <canvas id="gameCanvas" width="800" height="400"></canvas>
+  <div id="hud">
+    <span id="timer">Time: 0.0s</span>
+    <span id="coins">Coins: 0</span>
+    <span id="lives">Lives: 1</span>
+  </div>
+
+  <footer id="footer">
+    <p>感谢 抖音作者“无敌曼波大王”提供角色图像素材，B站作者“还给我神ID”提供音乐《太空曼波》</p>
+    <p>感谢 计科导助教提供的帮助与学习资源，ChatGPT 提供 HTML/CSS/JavaScript 技术支持，尤其是镜头跟随与数值设计方面</p>
+    <p>感谢 哥布林小屋的同学们提供的试玩建议，祝您游玩愉快</p>
+  </footer>
+    <script src="game.js"></script>
+</body>
+</html>

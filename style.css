@@ -1,0 +1,107 @@
+/* 页面基础设置 */
+body {
+  margin: 0;
+  overflow-x: hidden;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(to bottom, #e0f7ff, #ffffff);
+}
+
+/* 游戏画布设置 */
+#gameCanvas {
+  display: block;
+  margin: 20px auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  background: transparent; /* 由 drawBackground 控制绘制 */
+  border: 3px solid #333;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  margin-top: 20px;
+}
+
+/* 开始 / 重启按钮 */
+#startButton {
+  margin-top: 20px;
+  padding: 12px 24px;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease;
+}
+
+#startButton:hover {
+  background-color: #45a049;
+}
+
+/* 游戏内 HUD */
+#hud {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 8px 14px;
+  border-radius: 10px;
+  display: none;
+  gap: 16px;
+}
+
+/* 游戏介绍面板 */
+#introPanel,
+#gameOverPanel {
+  text-align: center;
+  margin-top: 80px;
+  max-width: 600px;
+  padding: 20px;
+  border-radius: 16px;
+  background-color: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+#gameTitle {
+  font-size: 36px;
+  margin-bottom: 10px;
+  color: #ff4081;
+  text-shadow: 1px 1px 2px #aaa;
+}
+
+#gameInstructions {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+#gameOverPanel {
+  display: none;
+}
+
+/* 底部致谢 */
+#footer {
+  text-align: center;
+  font-size: 13px;
+  color: #666;
+  background: rgba(240, 240, 240, 0.9);
+  padding: 12px 0;
+  margin-top: auto;
+  width: 100%;
+}
+
+#footer a {
+  color: #4faaf0;
+  text-decoration: none;
+}
+
+#footer a:hover {
+  text-decoration: underline;
+}
+.hidden-keep-space {
+  visibility: hidden;
+}
